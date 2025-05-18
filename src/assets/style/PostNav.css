@@ -1,0 +1,16 @@
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 20px;
+}
+
+.nav-link.actives {
+    color: rgb(58, 223, 252);
+    font-weight: bold;
+    border-bottom: 2px solid rgb(58, 223, 252);
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 12px;
+        transition: 0.5s;
+    }

@@ -1,0 +1,363 @@
+.training-info {
+background: linear-gradient(to right, #FEE440, #FFD166);
+    padding: 80px 20px;
+    border-radius: 20px;
+    /* margin: 50px 0; */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+
+.training-info h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.training-info p {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.training-item {
+    position: relative;
+    background: white;
+    padding: 50px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.training-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Background Image inside */
+.hover-image-inside {
+    position: absolute;
+    /* bottom: -100%; */
+    /* initially neeche hidden */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    /* border-radius: 12px; */
+    /* transition: bottom 0.5s ease, opacity 0.5s ease; */
+    z-index: 0;
+}
+
+/* Slide content up */
+.training-content {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.1s linear;
+}
+
+/* Hover Effects */
+.training-item:hover .hover-image-inside {
+    bottom: 0;
+    opacity: 0.8;
+}
+
+.training-item:hover .training-content {
+    transform: translateY(-20px);
+    /* upar move */
+}
+
+.training-content span {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.enroll-btn-wrapper {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.enroll-btn {
+    background-color: #a33333;
+    color: white;
+    padding: 14px 40px;
+    border: none;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.enroll-btn:hover {
+    background-color: #822020;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .training-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+}
+
+.training-programs-advanced {
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 30px;
+    margin: 80px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.training-programs-advanced::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 20%, transparent 70%);
+    animation: rotate 30s linear infinite;
+    z-index: 0;
+}
+
+.training-programs-advanced .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.training-programs-advanced h2 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
+}
+
+.training-programs-advanced .intro {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    line-height: 1.7;
+}
+
+.training-highlights,
+.training-audience {
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.training-highlights h3,
+.training-audience h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #00ffc3;
+}
+
+.training-highlights ul,
+.training-audience ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+.training-highlights li::before,
+.training-audience li::before {
+    content: "✅";
+    margin-right: 10px;
+    color: #ffcc00;
+}
+
+.motivation {
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    color: #ffdfdf;
+}
+
+.btn-join {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 0 20px #ff512f;
+    transition: all 0.4s ease;
+}
+
+.btn-join:hover {
+    background: linear-gradient(90deg, #dd2476, #ff512f);
+    box-shadow: 0 0 30px #dd2476;
+    transform: scale(1.1);
+}
+
+/* Basic Animations */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff6a00, 0 0 10px #ee0979;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #ff6a00, 0 0 30px #ee0979;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Scroll Animations */
+.animate-heading {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animate-fade {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.animate-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 2s ease forwards;
+}
+
+.animate-right {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInRight 2s ease forwards;
+}
+
+.animate-zoom {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: zoomIn 1.5s ease forwards;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.runner{
+    width: 680px;
+}
+.runner img{
+    width: 100%;
+}
+.training-programs-advanced {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+#tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    /* important to let user click through */
+}
+
+.training-programs-advanced .container {
+    position: relative;
+    z-index: 2;
+}
+.training-programs-advanced {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.training-programs-advanced .container {
+    position: relative;
+    z-index: 2;
+}
