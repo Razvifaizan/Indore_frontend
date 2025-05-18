@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Nav from './Component/Nav';
-import Home from './Component/Home';
-import Videosection from './Component/Videosection';
+import Nav from './Components/Nav';
+import Home from './Components/Home';
+import Videosection from './Components/Videosection';
 import v1 from './Images/v1.mp4';
 import { useEffect, useState } from 'react';
-import Login from './Component/Login';
-import PostSection from './Component/PostSection';
-import AdminPost from './Component/AdminPost';
-import GetVideo from "./Component/GetVideo";
-import PostNav from "./Component/PostNav"; // Fixed import path (no space)
+import Login from './Components/Login';
+import PostSection from './Components/PostSection';
+import AdminPost from './Components/AdminPost';
+import GetVideo from "./Components/GetVideo";
+import PostNav from "./Components/PostNav"; // Fixed import path (no space)
 
 function App() {
   const location = useLocation();
